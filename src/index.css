@@ -1098,3 +1098,9 @@ a svg { margin: 5px; }
     padding: 8px 2px;
   }
 }
+
+@media (max-width: 768px) {
+  .port-card:hover {
+    transform: none !important;
+  }
+}
