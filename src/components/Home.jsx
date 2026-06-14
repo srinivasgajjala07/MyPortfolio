@@ -18,7 +18,7 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 import { SiMysql, SiSpring } from "react-icons/si";
-import Randomuser from "../images/Randomuser.png";
+import Randomuser from "../images/randomuser.png";
 import texttospeechimg from "../images/texttospeech.png";
 import custchurnpredictionAppimg from "../images/custchurnpredictionApp.png";
 import { useNavigate } from "react-router-dom";
