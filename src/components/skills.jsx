@@ -30,7 +30,7 @@ export default function Skills() {
       {!orbitMode && (
         <section className="skills-section">
           <div className="skills-header pt-4">
-            <h2>Technology Stack</h2>
+            <h2>Technologies</h2>
             <div className="underline"></div>
             <p>Technologies I use to build scalable applications</p>
           </div>

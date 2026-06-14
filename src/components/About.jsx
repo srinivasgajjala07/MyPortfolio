@@ -40,7 +40,7 @@ function About() {
               </a>
             </div>
           </div>
-          <div className="mail tada">srinivasgajjala13@gmail.com</div>
+          <div className="mail tada">srinivasgajjala777@gmail.com</div>
           <p className="fs-5 mt-2 text-secondary aboutMepara fade-in">
             I’m Srinivas, a Java Full-Stack Developer who enjoys building clean,
             practical, and user-friendly web applications.

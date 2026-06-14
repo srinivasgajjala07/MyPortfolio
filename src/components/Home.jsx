@@ -1,5 +1,7 @@
 import React from "react";
 import novaai from "../images/novaai.png";
+import Myportfolio from "../images/Myportfolio.png";
+import BankAppimage from "../images/BankAppimage.png";
 // import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { BsCalendar } from "react-icons/bs";
 import {
@@ -8,6 +10,12 @@ import {
   FaDocker,
   FaGitAlt,
   FaBriefcase,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaCode,
+  FaLaptopCode,
+  FaUserTie,
 } from "react-icons/fa";
 import { SiMysql, SiSpring } from "react-icons/si";
 import Randomuser from "../images/Randomuser.png";
@@ -45,26 +53,57 @@ function Home() {
         <div className="port-main">
           {/* LEFT */}
           <div className="port-left">
+            <div className="open-to-work">
+              <span className="status-dot"></span>
+              Open to Work
+            </div>
             <h1 className="port-title">Hi, I'm Srinivas</h1>
 
-            <h2 className="port-subtitle">Java Full Stack Developer</h2>
-
+            <h2 className="port-subtitle">
+              Java Full Stack <span className="gradient-text">Developer</span>
+            </h2>
             <p className="port-desc">
               I build web applications using Java, Spring Boot, React, and
               MySQL.
             </p>
 
             <p className="port-status">
-              Currently seeking opportunities to grow as a Full Stack Developer.
+              Passionate about building modern web applications.
             </p>
 
-            <div className="port-buttons">
+            {/* <div className="port-buttons">
               <button className="port-btn port-btn-primary">
                 View Projects
               </button>
               <button className="port-btn">Download Resume</button>
               <button className="port-btn port-btn-light">GitHub</button>
+            </div> */}
+            <div className="social-icons">
+              <a
+                href="https://github.com/srinivasgajjala07"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="mailto:srinivasgajjala777@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaEnvelope />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/srinivasgajjala77"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
             </div>
+            {/* <div className="">
+            <button className='explore' onClick={()=> navigate('./about')}>More About Me</button>
+          </div> */}
           </div>
 
           {/* RIGHT */}
@@ -104,33 +143,38 @@ function Home() {
         </div>
 
         <div className="port-stats">
-          <div className="port-stat-card">
-            <FaBriefcase size={30} />
+  <div className="port-stat-card">
+    <FaBriefcase size={30} />
+    <div className="port-stat-text">
+      <h3>5+</h3>
+      <p>Projects Completed</p>
+    </div>
+  </div>
 
-            <div className="port-stat-text">
-              <h3>5+</h3>
-              <p>Projects Completed</p>
-            </div>
-          </div>
+  <div className="port-stat-card">
+    <FaCode size={30} />
+    <div className="port-stat-text">
+      <h3>100+</h3>
+      <p>DSA Problems</p>
+    </div>
+  </div>
 
-          <div className="port-stat-card">
-            <FaBriefcase size={30} />
+  <div className="port-stat-card">
+    <FaLaptopCode size={30} />
+    <div className="port-stat-text">
+      <h3>2+</h3>
+      <p>Years Learning</p>
+    </div>
+  </div>
 
-            <div className="port-stat-text">
-              <h3>5+</h3>
-              <p>Projects Completed</p>
-            </div>
-          </div>
-
-          <div className="port-stat-card">
-            <FaBriefcase size={30} />
-
-            <div className="port-stat-text">
-              <h3>5+</h3>
-              <p>Projects Completed</p>
-            </div>
-          </div>
-        </div>
+  <div className="port-stat-card">
+    <FaUserTie size={30} />
+    <div className="port-stat-text">
+      <h3>Open</h3>
+      <p>To Work</p>
+    </div>
+  </div>
+</div>
       </div>
       <div className="projects-section">
         <section>
@@ -171,7 +215,7 @@ function Home() {
                 <div className="tech">
                   <span>Spring Boot</span>
                   <span>React</span>
-                  <span>Css</span>
+                  <span>Java</span>
                 </div>
 
                 <div className="links">
@@ -476,7 +520,7 @@ function Home() {
             </article>
             <article className="project-card">
               <div className="image-box">
-                <img src={novaai} alt="project" />
+                <img src={BankAppimage} alt="project" />
                 <a
                   className="open-icon"
                   href="#"
@@ -499,12 +543,12 @@ function Home() {
               </div>
 
               <div className="content">
-                <h3>Project Name</h3>
+                <h3>Web Based Bank App</h3>
 
                 <div className="tech">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
+                  <span>Java</span>
+                  <span>Servlet</span>
+                  <span>Jsp</span>
                 </div>
 
                 <div className="links">
@@ -529,7 +573,10 @@ function Home() {
                     </span>
                   </a>
                   <a href="#">View</a>
-                  <a href="#">
+                  <a
+                    href="https://github.com/srinivasgajjala07/FutureTrust-Bank-App"
+                    target="_blank"
+                  >
                     Github
                     <span>
                       <svg
@@ -554,7 +601,7 @@ function Home() {
             </article>
             <article className="project-card">
               <div className="image-box">
-                <img src={novaai} alt="project" />
+                <img src={Myportfolio} alt="project" />
                 <a
                   className="open-icon"
                   href="#"
@@ -577,10 +624,10 @@ function Home() {
               </div>
 
               <div className="content">
-                <h3>Project Name</h3>
+                <h3>My Portfolio</h3>
 
                 <div className="tech">
-                  <span>HTML</span>
+                  <span>React</span>
                   <span>CSS</span>
                   <span>JavaScript</span>
                 </div>
@@ -607,7 +654,10 @@ function Home() {
                     </span>
                   </a>
                   <a href="#">View</a>
-                  <a href="#">
+                  <a
+                    href="https://github.com/srinivasgajjala07/MyPortfolio"
+                    target="_blank"
+                  >
                     Github
                     <span>
                       <svg

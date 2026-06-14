@@ -255,7 +255,7 @@ body.dark .proj-page .proj-search-input::placeholder{
   .proj-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 30px;
   }
 
   /* ── Responsive ── */

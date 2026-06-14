@@ -106,7 +106,7 @@ function Contact() {
         </div>
         {submitted ? (
           <div className="contact-right">
-            <h2 id="wishmsg">Thank you for your message😍</h2>
+            <h2 id="wishmsg">Thank you for your message</h2>
           </div>
         ) : (
           <div className="contact-right">

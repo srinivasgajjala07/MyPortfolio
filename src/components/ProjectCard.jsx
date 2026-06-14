@@ -12,9 +12,10 @@ const css = `
     display: flex;
     flex-direction: column;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow:0 1px 8px rgba(0,0,0,0.35);
   }
   .proj-card-wrap:hover {
-    transform: translateY(-6px);
+    // transform: translateY(-6px);
     box-shadow: 0 20px 48px rgba(108, 71, 255, 0.13);
     border-color: #a78bfa;
   }
@@ -31,9 +32,7 @@ const css = `
     display: block;
     transition: transform 0.4s ease;
   }
-  .proj-card-wrap:hover .card-img-box img {
-    transform: scale(1.06);
-  }
+ 
      body.dark  .proj-card-wrap{
        background:#1f2933;
        border:none; 

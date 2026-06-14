@@ -103,7 +103,7 @@ const Experience = () => {
             <div className="timeline-dot"></div>
 
             <div className="role">Software Engineer</div>
-            <div className="cmpny">xyz pvt ltd</div>
+            <div className="cmpny">Soltech Infolabs</div>
             <div className="duration">April 2025 — Present</div>
 
             <ul className="points">
