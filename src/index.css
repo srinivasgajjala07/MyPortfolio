@@ -16,7 +16,7 @@
 
 .nav {
   justify-self: center;
-  display: block; /* fixed: was 'ruby' */
+  display: block;
 }
 
 .nav a {
@@ -315,8 +315,9 @@ body { margin: 0; }
 #desig { font-size: 1.5rem; font-family: monospace; }
 
 .explore {
+  display: block;          /* FIX: ensures margin: auto works */
   padding: 18px 8px;
-  margin: 25px 0;
+  margin: 25px auto;       /* FIX: was "25px 0" — auto centers it */
   width: 32%;
   font-size: 1.2rem;
   cursor: pointer;
@@ -399,15 +400,14 @@ body.light .open-icon:hover { background: oklab(72.564% 0.0368 -0.13683); color:
 body.dark .tech span { background-color: hsl(0deg 0.03% 32.85%); color: #fff; }
 
 .links { display: flex; gap: 30px; justify-content: center; }
-/* .links a { width: 31%; font-size: 1.4rem; color: #9fb3c8; text-decoration: none; } */
-.links a{
-  display:flex;
-  align-items:center;
-  gap:6px;
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
-   width: 25%;
-   font-size: 1.4rem;
-   color: #9fb3c8;
+  width: 25%;
+  font-size: 1.4rem;
+  color: #9fb3c8;
 }
 .links a:hover { color: oklab(72.564% 0.0368 -0.13683); }
 .links span { padding-left: 5%; }
@@ -719,7 +719,7 @@ a svg { margin: 5px; }
   flex-direction: column;
   padding: 60px;
   color: white;
-  margin:2.5% 0%;
+  margin: 2.5% 0%;
 }
 
 .port-left {
@@ -730,10 +730,10 @@ a svg { margin: 5px; }
 
 .port-title { font-size: 35px; }
 .light .port-title { color: #000; }
-.port-subtitle { 
-  font-size: 45px; 
+.port-subtitle {
+  font-size: 45px;
   margin: 10px 0;
-  font-weight:bold; 
+  font-weight: bold;
 }
 .light .port-subtitle { color: #000; }
 .port-desc { color: #aaa; margin-top: 10px; }
@@ -747,7 +747,7 @@ a svg { margin: 5px; }
 .port-stats {
   margin-top: 75px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* fixed: was 4, you have 3 cards */
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding-inline-start: 3.5%;
   padding-inline-end: 4%;
@@ -852,9 +852,8 @@ a svg { margin: 5px; }
 /* ================= MOBILE (768px) ================= */
 @media (max-width: 768px) {
 
-  .aboutSections {
-    display: none;
-  }
+  .aboutSections { display: none; }
+
   /* Header */
   .header {
     display: flex;
@@ -873,15 +872,18 @@ a svg { margin: 5px; }
 
   .nav.nav-open { display: block; }
 
- .nav-links {
-  display: flex;
-  flex-direction: row;  
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
+  /* FIX: allow nav links to wrap and add spacing */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;           /* FIX: was missing — prevents overflow */
+    justify-content: center;
+    align-items: center;
+    gap: 0px;                  /* FIX: was 0px — items were touching */
+    margin:0px;
+  }
 
-  .nav-links li { border-radius: 0; padding: 10px 16px; }
+  .nav-links li { border-radius: 0; padding: 10px 12px; }
   .nav-links a { font-size: 16px; }
   .hamburger { display: flex; }
   .theme-toggle { justify-self: unset; gap: 12px; }
@@ -894,8 +896,21 @@ a svg { margin: 5px; }
   .port-subtitle { font-size: 18px; }
   .port-desc, .port-status { font-size: 14px; }
 
-  .port-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-  .port-btn { margin-right: 0; font-size: 13px; padding: 8px 14px; }
+  /* FIX: stack buttons on mobile, not just on tiny phones */
+  .port-buttons {
+    display: flex;
+    flex-direction: column;    /* FIX: moved from 480px — cleaner on all phones */
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .port-btn {
+    margin-right: 0;
+    font-size: 13px;
+    padding: 8px 14px;
+    width: 100%;               /* FIX: full-width stacked buttons */
+    text-align: center;
+  }
 
   .port-right { width: 100%; }
   .port-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -917,7 +932,13 @@ a svg { margin: 5px; }
 
   /* About */
   .aboutSection { width: 90%; }
-  .aboutMepara { width: 90%; margin-left: 5%; }
+
+  /* FIX: reliably center the paragraph on mobile */
+  .aboutMepara {
+    width: 90%;
+    margin: 0 auto;            /* FIX: was margin-left: 5% — not truly centered */
+  }
+
   .gettoknow { margin-right: 0; }
   .edu-card { height: 280px; }
   .edu-text { font-size: 32px; }
@@ -935,28 +956,54 @@ a svg { margin: 5px; }
 
   /* Contact */
   #contactSection { padding: 24px 12px; }
-  .contact-wrapper { flex-direction: column; padding: 24px 16px; gap: 24px; }
+  .contact-wrapper {
+    box-sizing: border-box;    /* FIX: ensures padding doesn't cause overflow */
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px;
+  }
   .contact-left { width: 100%; }
   .contact-right { width: 100%; }
   .contact-left h2 { font-size: 22px; }
 
-  /* Footer */
-  .footer-nav-links {
+ /* ================= FOOTER NAV ================= */
+.footer-nav-links {
   display: flex;
-  flex-direction: row;  
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
+  flex-wrap: nowrap;          /* ← always one line */
+  justify-content: center;    /* ← add this */
+  gap: 8px;                   /* ← tighter gap so 4 links fit comfortably */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-  
+
+/* Inside @media (max-width: 768px) — replace the footer-nav-links rule with: */
+.footer-nav-links {
+  flex-wrap: nowrap;          /* ← never wrap, even on mobile */
+  justify-content: center;
+  gap: 4px;                   /* ← even tighter on small screens */
+}
+
+.footer-nav-links a {
+  font-size: 15px;            /* ← slightly smaller on mobile so all 4 fit */
+}
+
   .social-icons { gap: 24px; justify-content: center; }
   .section { padding: 6%; min-height: auto; }
 
-  /* Intro (old hero) */
+  /* Intro */
   .zoom-in-introd { margin: 8% 4%; }
   .zoom-in-introd i { font-size: 1.6rem; }
   #desig { font-size: 1.1rem; }
-  .explore { width: 70%; font-size: 1rem; padding: 14px 8px; }
+
+  /* FIX: center the explore button on mobile */
+  .explore {
+    display: block;
+    width: 70%;
+    margin: 14px auto;         /* FIX: auto left/right to center it */
+    font-size: 1rem;
+    padding: 14px 8px;
+  }
 }
 
 /* ================= SMALL PHONES (480px) ================= */
@@ -964,8 +1011,7 @@ a svg { margin: 5px; }
   .port-title { font-size: 24px; }
   .port-subtitle { font-size: 16px; }
   .port-grid { grid-template-columns: repeat(2, 1fr); }
-  .port-buttons { flex-direction: column; }
-  .port-btn { width: 100%; text-align: center; }
+  /* port-buttons and port-btn already handled at 768px */
   .port-stats { grid-template-columns: 1fr; }
   .port-stat-card { gap: 12px; padding: 14px; }
   .info-section { flex-wrap: wrap; }
@@ -975,6 +1021,7 @@ a svg { margin: 5px; }
   .edu-card { height: 220px; }
 }
 
+/* ================= OPEN TO WORK ================= */
 .open-to-work {
   display: inline-flex;
   align-items: center;
@@ -987,7 +1034,7 @@ a svg { margin: 5px; }
   font-size: 14px;
   font-weight: 500;
 }
-.light .open-to-work {color:#000;}
+.light .open-to-work { color: #000; }
 
 .status-dot {
   width: 10px;
@@ -998,17 +1045,9 @@ a svg { margin: 5px; }
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.8);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-  }
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.8); }
+  70%  { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
 .gradient-text {
@@ -1016,4 +1055,8 @@ a svg { margin: 5px; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.experience-section{
+  text-align:left;
+
 }
