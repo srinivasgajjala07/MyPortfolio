@@ -1061,12 +1061,11 @@ a svg { margin: 5px; }
 
 }
 
-
 @media (max-width: 768px) {
-  .nav-links {
+  .header .nav .nav-links {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;          
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 0;
@@ -1076,25 +1075,26 @@ a svg { margin: 5px; }
     width: 100%;
   }
  
-  .nav-links li {
-    padding: 8px 6px;          
-    flex: 1;                  
+  .header .nav .nav-links li {
+    padding: 8px 6px;
+    flex: 1;                  /* scoped — won't touch skill orbit li's */
     text-align: center;
   }
  
-  .nav-links a {
-    font-size: 13px;            
+  .header .nav .nav-links a {
+    font-size: 13px;
     padding: 4px 2px;
-    white-space: nowrap;       
+    white-space: nowrap;
+    display: block;
   }
 }
  
 @media (max-width: 480px) {
-  .nav-links a {
-    font-size: 12px;           
+  .header .nav .nav-links a {
+    font-size: 12px;
   }
  
-  .nav-links li {
+  .header .nav .nav-links li {
     padding: 8px 2px;
   }
 }
