@@ -1,6 +1,6 @@
 import novaai from "../images/novaai.png";
 import Myportfolio from "../images/Myportfolio.png";
-import randomUser from "../images/randomUser.png";
+import randomUser from "../images/randomuser.png";
 import custchurnpred from "../images/custchurnpredictionApp.png";
 import texttospeechimg from "../images/texttospeech.png";
 import stopwatchimg from "../images/Stop_watchimage.png";
