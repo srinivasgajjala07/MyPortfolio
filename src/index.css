@@ -1060,3 +1060,41 @@ a svg { margin: 5px; }
   text-align:left;
 
 }
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+ 
+  .nav-links li {
+    padding: 8px 6px;          
+    flex: 1;                  
+    text-align: center;
+  }
+ 
+  .nav-links a {
+    font-size: 13px;            
+    padding: 4px 2px;
+    white-space: nowrap;       
+  }
+}
+ 
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 12px;           
+  }
+ 
+  .nav-links li {
+    padding: 8px 2px;
+  }
+}
