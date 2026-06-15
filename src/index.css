@@ -1087,27 +1087,17 @@ a svg { margin: 5px; }
     white-space: nowrap;
     display: block;
   }
+ 
 }
  
 @media (max-width: 480px) {
   .header .nav .nav-links a {
     font-size: 12px;
   }
- 
+  .theme-toggle{
+    gap:30px !important;
+  }
   .header .nav .nav-links li {
     padding: 8px 2px;
-  }
-}
-
-@media (max-width: 768px) {
-  .port-card {
-    transition: none;
-  }
-
-  .port-card:hover {
-    transform: none;
-  }
-   .right button {
-    display: none;
   }
 }
