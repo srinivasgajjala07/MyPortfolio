@@ -633,7 +633,7 @@ function Home() {
                 </div>
 
                 <div className="links">
-                  <a href="#">
+                  <a href="https://srinivasinfo.vercel.app/">
                     Live
                     <span>
                       <svg

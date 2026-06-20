@@ -47,9 +47,9 @@ export const projects = [
 
     tech: ["HTML", "React", "JavaScript"],
 
-    live: "#",
+    live: "https://srinivasinfo.vercel.app/",
 
-    github: "#",
+    github: "https://github.com/srinivasgajjala07/MyPortfolio",
   },
 
   {
