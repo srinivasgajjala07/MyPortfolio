@@ -116,10 +116,12 @@ const Experience = () => {
             <div className="tech">
               <span>Java</span>
               <span>Spring Boot</span>
+              <span>Micro Services</span>
               <span>React</span>
               <span>MySQL</span>
               <span>REST APIs</span>
               <span>Git</span>
+              <span>AWS</span>
             </div>
           </div>
         </div>

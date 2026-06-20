@@ -977,15 +977,8 @@ a svg { margin: 5px; }
   margin: 0;
 }
 
-/* Inside @media (max-width: 768px) — replace the footer-nav-links rule with: */
-.footer-nav-links {
-  flex-wrap: nowrap;          /* ← never wrap, even on mobile */
-  justify-content: center;
-  gap: 4px;                   /* ← even tighter on small screens */
-}
-
 .footer-nav-links a {
-  font-size: 15px;            /* ← slightly smaller on mobile so all 4 fit */
+  font-size: 15px;            
 }
 
   .social-icons { gap: 24px; justify-content: center; }
@@ -1087,7 +1080,17 @@ a svg { margin: 5px; }
     white-space: nowrap;
     display: block;
   }
- 
+  .port-card:nth-child(3),
+  .port-card:nth-child(5) {
+    display: none;
+  }
+  .tech{
+    gap:1px;
+  }
+  .theme-toggle button{
+    display:none;
+  }
+
 }
  
 @media (max-width: 480px) {

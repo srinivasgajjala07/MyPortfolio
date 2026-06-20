@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 const skills = [
   { title: "Programming", items: ["Java"] },
-  { title: "Backend", items: ["Spring", "Spring Boot"] },
+  { title: "Backend", items: ["Spring", "Spring Boot","MicroServices"] },
   { title: "Frontend", items: ["HTML", "CSS", "JavaScript", "React"] },
   { title: "Database", items: ["SQL", "MySQL", "Oracle"] },
   { title: "ORM", items: ["Hibernate", "JPA"] },
   { title: "Web Services", items: ["REST API", "JSON"] },
-  { title: "Build & Version Control", items: ["Maven", "Git"] },
-  { title: "Server", items: ["Tomcat"] },
-  { title: "Testing", items: ["JUnit"] },
+  { title: "Build & Version Control", items: ["Maven", "Git","AWS"] },
+  { title: "Server", items: ["Tomcat","JBoss"] },
+  { title: "Testing", items: ["JUnit","mockito"] },
 ];
 
 export default function Skills() {

@@ -119,7 +119,7 @@ function Home() {
                 <span>React</span>
               </div>
 
-              {/* <div className="port-card">
+              <div className="port-card">
                 <SiMysql size={40} color="#00758F" />
                 <span>MySQL</span>
               </div>
@@ -127,7 +127,7 @@ function Home() {
               <div className="port-card">
                 <SiSpring size={40} color="#6DB33F" />
                 <span>Spring</span>
-              </div> */}
+              </div>
 
               <div className="port-card">
                 <FaDocker size={40} color="#2496ED" />
